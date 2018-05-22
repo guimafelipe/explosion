@@ -14,7 +14,7 @@ mid_height = 1.0
 radial_segments = 64
 rings = 8
 
-[node name="PersonRagdoll" type="RigidBody" index="0" groups=[
+[node name="PersonRagdoll" type="RigidBody" groups=[
 "ExplodeReceptor",
 ]]
 

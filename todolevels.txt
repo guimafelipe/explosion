@@ -1,0 +1,17 @@
+Level 1:
+	Simples, ande até uma pessoa e exploda ela.
+
+Level 2:
+	Exploda 5 pessoas de uma vez.
+
+Level 3:
+	Exploda um carro que vai passar por você.
+
+Level 4:
+	Ande até uma pessoa e a exploda, mas se você encostar em alguém, você é explodido.
+
+Level 5:
+	Exploda a pessoa sem ela te ver.
+
+Level 6:
+	Exploda a pessoa sem a polícia te ver.

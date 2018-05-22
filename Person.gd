@@ -13,3 +13,29 @@ func explode(exp_origin):
 	rag.translation.y = 1.5
 	rag.explode(exp_origin)	
 	queue_free()
+
+var speed = 500
+var direction = Vector3()
+var gravity = -9.8
+var velocity = Vector3()
+
+func _physics_process(delta):
+	direction = Vector3(0, 0, 0)
+	
+	velocity.y += gravity * delta
+	velocity.x = direction.x
+	velocity.z = direction.z
+	
+	if velocity.y > 0:
+		gravity = -20
+	else:
+		gravity = -30
+	
+	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
+	
+#	var hitCount = get_slide_count()
+#
+#	if(hitCount > 0):
+#		var collision = get_slide_collision(0)
+#		if collision.collider is RigidBody:
+#			collision.collider.apply_impulse(collision.position, -collision.normal)x
