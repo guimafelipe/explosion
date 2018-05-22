@@ -10,6 +10,10 @@ func _ready():
 	# Initialization here
 	pass
 
+func _process(delta):
+	if(Input.is_action_just_pressed("explode")):
+		$ExplosionArea.explode()
+
 func _physics_process(delta):
 	direction = Vector3(0, 0, 0)
 	var cam_xform = get_node("Target/Camera").get_global_transform()

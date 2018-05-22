@@ -1,15 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Beyblade.gd" type="Script" id=1]
-[ext_resource path="res://Camera.gd" type="Script" id=2]
-[ext_resource path="res://ExplosionArea.gd" type="Script" id=3]
+[ext_resource path="res://Person.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 1.0
 height = 1.0
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=3]
 
 render_priority = 0
 flags_transparent = false
@@ -32,7 +30,7 @@ params_point_size = 1.0
 params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
-albedo_color = Color( 0, 1, 0.90625, 1 )
+albedo_color = Color( 0.996094, 0.819206, 0.011673, 1 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -59,20 +57,19 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Vertex Color" ]
+_sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CapsuleMesh" id=3]
+[sub_resource type="CapsuleMesh" id=2]
 
+material = SubResource( 3 )
 radius = 1.0
 mid_height = 1.0
 radial_segments = 64
 rings = 8
 
-[sub_resource type="SphereShape" id=4]
-
-radius = 1.0
-
-[node name="Beyblade" type="KinematicBody"]
+[node name="Person" type="KinematicBody" groups=[
+"ExplodeReceptor",
+]]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -86,7 +83,7 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
@@ -98,7 +95,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
 
 layers = 1
-material_override = SubResource( 2 )
+material_override = null
 cast_shadow = 1
 extra_cull_margin = 0.0
 use_in_baked_light = false
@@ -106,62 +103,8 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
-_sections_unfolded = [ "Geometry", "Transform" ]
-
-[node name="Target" type="Spatial" parent="." index="1"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47388, 0 )
-
-[node name="Camera" type="Camera" parent="Target" index="0"]
-
-transform = Transform( 1, 0, 0, 0, 0.955321, 0.29557, 0, -0.29557, 0.955321, 0, 4.82991, 7.37733 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-script = ExtResource( 2 )
-offset = Vector3( 0, -2, 10 )
-
-[node name="ExplosionArea" type="Area" parent="." index="2"]
-
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 1.0098, 0 )
-input_ray_pickable = false
-input_capture_on_drag = false
-space_override = 0
-gravity_point = false
-gravity_distance_scale = 0.0
-gravity_vec = Vector3( 0, -1, 0 )
-gravity = 9.8
-linear_damp = 0.1
-angular_damp = 1.0
-priority = 0.0
-monitoring = true
-monitorable = true
-collision_layer = 1
-collision_mask = 1
-audio_bus_override = false
-audio_bus_name = "Master"
-reverb_bus_enable = false
-reverb_bus_name = "Master"
-reverb_bus_amount = 0.0
-reverb_bus_uniformity = 0.0
-script = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape" type="CollisionShape" parent="ExplosionArea" index="0"]
-
-shape = SubResource( 4 )
-disabled = false
 
 
