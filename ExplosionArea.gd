@@ -8,4 +8,4 @@ func explode():
 	print(exploded_items)
 	for item in exploded_items:
 		if item.is_in_group("ExplodeReceptor"):
-			item.explode(transform.origin)
+			item.explode(global_transform.origin)

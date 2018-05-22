@@ -7,7 +7,7 @@
 radius = 1.0
 height = 1.0
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=2]
 
 render_priority = 0
 flags_transparent = false
@@ -59,9 +59,9 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo" ]
 
-[sub_resource type="CapsuleMesh" id=2]
+[sub_resource type="CapsuleMesh" id=3]
 
-material = SubResource( 3 )
+material = SubResource( 2 )
 radius = 1.0
 mid_height = 1.0
 radial_segments = 64
@@ -103,7 +103,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 skeleton = NodePath("..")
 material/0 = null
 
