@@ -1,56 +1,109 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://TestMap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Person.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Level2.gd" type="Script" id=1]
+[ext_resource path="res://TestMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Person.tscn" type="PackedScene" id=4]
 
 [node name="Level2" type="Spatial" index="0"]
 
-[node name="TestMap" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
+
+[node name="TestMap" parent="." index="0" instance=ExtResource( 2 )]
 
 transform = Transform( 3.21771, 0, 0, 0, 1, 0, 0, 0, 4.13164, 0, 0, 0 )
 
-[node name="Beyblade" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Beyblade" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7372, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7372, 39.0336 )
 
-[node name="Person" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5257, 2.24144, 10.9672 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.3422, 2.24144, 31.735 )
 
-[node name="Person2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Route" type="Spatial" parent="Person" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1475, 2.24144, -12.5186 )
+[node name="Position3D" type="Position3D" parent="Person/Route" index="0"]
 
-[node name="Person3" parent="." index="4" instance=ExtResource( 3 )]
+[node name="Position3D2" type="Position3D" parent="Person/Route" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7678, 2.24144, 22.9251 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
 
-[node name="Person4" parent="." index="5" instance=ExtResource( 3 )]
+[node name="Person2" parent="." index="3" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5742, 2.24144, 22.5328 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1146, 2.24144, 35.7619 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Person5" parent="." index="6" instance=ExtResource( 3 )]
+[node name="Route" type="Spatial" parent="Person2" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24144, -14.0065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.227615, 0, -1.18016 )
 
-[node name="Person6" parent="." index="7" instance=ExtResource( 3 )]
+[node name="Position3D" type="Position3D" parent="Person2/Route" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6192, 2.24144, 6.06798 )
+[node name="Position3D2" type="Position3D" parent="Person2/Route" index="1"]
 
-[node name="Person7" parent="." index="8" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7525, 2.24144, 14.9493 )
+[node name="Person3" parent="." index="4" instance=ExtResource( 4 )]
 
-[node name="Person8" parent="." index="9" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9869, 2.24144, 39.8494 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Route" type="Spatial" parent="Person3" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151253, 0, -0.10265 )
+
+[node name="Position3D" type="Position3D" parent="Person3/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person3/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
+
+[node name="Person4" parent="." index="5" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7679, 2.24144, 25.6355 )
+
+[node name="Route" type="Spatial" parent="Person4" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position3D" type="Position3D" parent="Person4/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person4/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6316, 0, -2.96406 )
+
+[node name="Person5" parent="." index="6" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4678, 2.24144, 18.6652 )
+
+[node name="Route" type="Spatial" parent="Person5" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position3D" type="Position3D" parent="Person5/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person5/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4368, 0, 3.44546 )
+
+[node name="Person6" parent="." index="7" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07271, 2.24144, 16.3357 )
+
+[node name="Person7" parent="." index="8" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2015, 2.24144, -17.3835 )
+
+[node name="Person8" parent="." index="9" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6933, 2.24144, -20.2995 )
 
-[node name="Person9" parent="." index="10" instance=ExtResource( 3 )]
+[node name="Person9" parent="." index="10" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9025, 2.24144, 18.6562 )
 
-[node name="Person10" parent="." index="11" instance=ExtResource( 3 )]
+[node name="Person10" parent="." index="11" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8423, 2.24144, 2.5272 )
 

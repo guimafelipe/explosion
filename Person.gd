@@ -10,14 +10,21 @@ var gravity = -9.8
 var velocity = Vector3()
 var destination
 
+var route_pos = []
+var initial_point = -1
+
 func _ready():
-	pass
+	if $Route:
+		for point in $Route.get_children():
+			route_pos.append(point)
+		set_destination(route_pos[0].global_transform.origin)
+		initial_point = 0
 
 func set_destination(new_dest):
 	destination = new_dest
 
 func move_to(destination, dt):
-	var direction = global_transform.origin - destination
+	var direction = destination - global_transform.origin
 	direction = direction.normalized() * speed * dt
 	velocity.x = direction.x
 	velocity.z = direction.z
@@ -31,6 +38,13 @@ func explode(exp_origin):
 	rag.explode(exp_origin) #chama a explosao
 	queue_free()
 
+func change_destination():
+	initial_point+=1
+	if initial_point < route_pos.size():
+		set_destination(route_pos[initial_point].global_transform.origin)
+	else:
+		initial_point = -1 #chegou ao ultimo ponto
+
 func _physics_process(delta):
 	var direction = Vector3(0, 0, 0)
 	
@@ -43,11 +57,14 @@ func _physics_process(delta):
 	else: #truquezinho pra fazer o pulo ficar legal
 		gravity = -30
 	
-	if abs(global_transform.origin - destination) > EPS:
-		reached_destination = false
-		move_to(destination, delta) #set velocity to move to point
-	else:
-		reached_destination = true
+	if initial_point != -1:
+		var here = self.global_transform.origin
+		if here.distance_to(destination) > EPS:
+#			reached_destination = false
+			move_to(destination, delta) #set velocity to move to point
+		else:
+#			reached_destination = true
+			change_destination()
 	
 	velocity = move_and_slide(velocity, up_vec)
 	
