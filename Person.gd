@@ -3,7 +3,7 @@ extends KinematicBody
 const up_vec = Vector3(0, 1, 0)
 const EPS = 0.5
 
-onready var ragdoll = load("res://PersonRagdoll.tscn")
+var ragdoll
 var speed = 400
 signal reached_destination
 var gravity = -9.8
@@ -13,12 +13,16 @@ var destination
 var route_pos = []
 var initial_point = -1
 
-func _ready():
+func set_route():
 	if $Route:
 		for point in $Route.get_children():
 			route_pos.append(point)
 		set_destination(route_pos[0].global_transform.origin)
 		initial_point = 0
+	ragdoll = load("res://PersonRagdoll.tscn")
+
+func _ready():
+	set_route()
 
 func set_destination(new_dest):
 	destination = new_dest
