@@ -1,5 +1,7 @@
 extends KinematicBody
 
+export var loop = false #to continue in the route
+
 const up_vec = Vector3(0, 1, 0)
 const EPS = 0.5
 
@@ -16,8 +18,8 @@ var initial_point = -1
 func set_route():
 	if $Route:
 		for point in $Route.get_children():
-			route_pos.append(point)
-		set_destination(route_pos[0].global_transform.origin)
+			route_pos.append(point.global_transform.origin)
+		set_destination(route_pos[0])
 		initial_point = 0
 	ragdoll = load("res://PersonRagdoll.tscn")
 
@@ -45,7 +47,10 @@ func explode(exp_origin):
 func change_destination():
 	initial_point+=1
 	if initial_point < route_pos.size():
-		set_destination(route_pos[initial_point].global_transform.origin)
+		set_destination(route_pos[initial_point])
+	elif loop:
+		initial_point = 0
+		set_destination(route_pos[initial_point])
 	else:
 		initial_point = -1 #chegou ao ultimo ponto
 

@@ -18,9 +18,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.66147, 1.37083, 0 )
 [node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1758, 1.65759, 5.28757 )
+loop = false
 
 [node name="Person2" parent="." index="3" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1758, 1.65759, 0 )
+loop = false
 
 
