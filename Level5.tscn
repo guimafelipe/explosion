@@ -5,7 +5,7 @@
 [ext_resource path="res://Person.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bomba.tscn" type="PackedScene" id=4]
 
-[node name="Level5" type="Spatial" index="0"]
+[node name="Level5" type="Spatial"]
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 1 )]
 

@@ -4,7 +4,7 @@
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Person.tscn" type="PackedScene" id=3]
 
-[node name="Level4" type="Spatial"]
+[node name="Level4" type="Spatial" index="0"]
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 1 )]
 

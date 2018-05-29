@@ -19,7 +19,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27324, 3.18251, 17.587 )
 ] instance=ExtResource( 3 )]
 
 transform = Transform( -0.236704, 0, 0.998733, 0, 1.0264, 0, -0.998733, 0, -0.236704, -38.8896, 1.58315, 8.34323 )
-loop = false
 
 [node name="Route" type="Spatial" parent="Car" index="1"]
 

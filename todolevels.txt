@@ -16,7 +16,7 @@ Level 5: -Done
 Level 6:
 	Exploda a pessoa sem a polícia te ver.
 
-Level 7: -Doing
+Level 7: -Done
 	Reação em cadeia: empurre bombas de modo que você consiga explodir de longe
 
 Level 8:

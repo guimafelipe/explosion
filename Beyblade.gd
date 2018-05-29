@@ -42,9 +42,9 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = 10 #jump
 	
-#	var hitCount = get_slide_count()
-#
-#	if(hitCount > 0):
-#		var collision = get_slide_collision(0)
-#		if collision.collider is RigidBody:
-#			collision.collider.apply_impulse(collision.position, -collision.normal)x
+	var hitCount = get_slide_count()
+
+	if(hitCount > 0):
+		var collision = get_slide_collision(0)
+		if collision.collider is RigidBody:
+			collision.collider.apply_impulse(collision.position, -collision.normal)
