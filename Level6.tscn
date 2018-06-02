@@ -16,37 +16,113 @@ transform = Transform( 3.46451, 0, 0, 0, 1, 0, 0, 0, 5.20071, 0, 0, 0 )
 
 [node name="Person" parent="." index="2" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5209, 1.71647, 14.3795 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5209, 1.16248, 14.3795 )
+_sections_unfolded = [ "Collision", "Transform" ]
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position3D" type="Position3D" parent="Person/Route" index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position3D2" type="Position3D" parent="Person/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.51503, 0, 9.31268 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Person2" parent="." index="3" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.33424, 1.71647, 28.7504 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.33424, 0.959415, 28.7504 )
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person2" index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position3D" type="Position3D" parent="Person2/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person2/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.939, 0, -2.43413 )
 
 [node name="Person3" parent="." index="4" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2964, 1.71647, 26.2455 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2964, 1.17493, 26.2455 )
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person3" index="1"]
+
+[node name="Position3D" type="Position3D" parent="Person3/Route" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5974, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="Person3/Route" index="1"]
 
 [node name="Person4" parent="." index="5" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275326, 1.71647, -0.0722008 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0275326, 1.05624, -0.0722008 )
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person4" index="1"]
+
+[node name="Position3D" type="Position3D" parent="Person4/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person4/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -33.0578 )
+
+[node name="Position3D3" type="Position3D" parent="Person4/Route" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2857, 0, -15.3446 )
+
+[node name="Position3D4" type="Position3D" parent="Person4/Route" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7237, 0, 0 )
 
 [node name="Person5" parent="." index="6" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3864, 1.71647, -0.0722008 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3864, 1.16989, -0.0722008 )
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person5" index="1"]
+
+[node name="Position3D" type="Position3D" parent="Person5/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person5/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31173, 0, 18.7229 )
+
+[node name="Position3D3" type="Position3D" parent="Person5/Route" index="2"]
+
+transform = Transform( 0.212159, 0, -0.977235, 0, 1, 0, 0.977235, 0, 0.212159, -23.1045, 0, 7.83587 )
 
 [node name="Person6" parent="." index="7" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8407, 1.71647, 13.188 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8407, 1.11453, 13.188 )
+loop = true
 exploderous = true
+
+[node name="Route" type="Spatial" parent="Person6" index="1"]
+
+[node name="Position3D" type="Position3D" parent="Person6/Route" index="0"]
+
+[node name="Position3D2" type="Position3D" parent="Person6/Route" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4468, 0, 0 )
 
 [node name="Person7" parent="." index="8" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7584, 1.71647, -27.1979 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7584, 0.909565, -27.1979 )
 exploderous = false
 
 

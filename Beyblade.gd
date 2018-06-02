@@ -16,20 +16,33 @@ func _process(delta):
 	if(Input.is_action_just_pressed("explode")):
 		explode()
 
+func change_camera_parent():
+	var par_dest = get_node("..")
+	var par_or = $Target
+	var camera = $Target/Camera
+	par_or.remove_child(camera)
+	par_dest.add_child(camera)
+
 func explode():
+	change_camera_parent()
 	$ExplosionArea.explode()
+	yield(get_tree(), "idle_frame")
+	print("morri")
+	queue_free()
 
 func _physics_process(delta):
 	direction = Vector3(0, 0, 0)
-	var cam_xform = get_node("Target/Camera").get_global_transform()
-	if (Input.is_action_pressed("move_up")):
-		direction += -cam_xform.basis[2]
-	if (Input.is_action_pressed("move_down")):
-		direction += cam_xform.basis[2]
-	if (Input.is_action_pressed("move_left")):
-		direction += -cam_xform.basis[0]
-	if (Input.is_action_pressed("move_right")):
-		direction += cam_xform.basis[0]
+	if $Target.get_child_count() > 0:
+		var camera = $Target/Camera
+		var cam_xform = camera.get_global_transform()
+		if (Input.is_action_pressed("move_up")):
+			direction += -cam_xform.basis[2]
+		if (Input.is_action_pressed("move_down")):
+			direction += cam_xform.basis[2]
+		if (Input.is_action_pressed("move_left")):
+			direction += -cam_xform.basis[0]
+		if (Input.is_action_pressed("move_right")):
+			direction += cam_xform.basis[0]
 	direction = direction.normalized()
 	direction = direction * speed * delta
 	

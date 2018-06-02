@@ -51,8 +51,10 @@ func change_destination():
 		set_destination(route_pos[initial_point])
 	elif loop:
 		initial_point = 0
+#		print("resetou posicao")
 		set_destination(route_pos[initial_point])
 	else:
+#		print("finalizou rota")
 		initial_point = -1 #chegou ao ultimo ponto
 
 func _physics_process(delta):
