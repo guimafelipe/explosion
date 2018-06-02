@@ -17,21 +17,26 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9815, 1.54648, 0 )
 [node name="Alvo" parent="." index="2" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.843, 1.54648, 0 )
+exploderous = false
 
 [node name="Person2" parent="." index="3" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24013, 1.54648, 15.6613 )
+exploderous = false
 
 [node name="Person3" parent="." index="4" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2008, 1.54648, -17.7687 )
+exploderous = false
 
 [node name="Person4" parent="." index="5" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7618, 1.54648, 11.2326 )
+exploderous = false
 
 [node name="Person5" parent="." index="6" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09723, 1.54648, -3.52329 )
+exploderous = false
 
 

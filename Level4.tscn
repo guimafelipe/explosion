@@ -4,7 +4,7 @@
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Person.tscn" type="PackedScene" id=3]
 
-[node name="Level4" type="Spatial" index="0"]
+[node name="Level4" type="Spatial"]
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -16,6 +16,7 @@ transform = Transform( 3.59166, 0, 0, 0, 1, 0, 0, 0, 4.39634, 0, 0, 0 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25809, -28.6758 )
 loop = true
+exploderous = false
 
 [node name="Route" type="Spatial" parent="Person" index="1"]
 

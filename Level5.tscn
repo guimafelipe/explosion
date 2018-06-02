@@ -18,6 +18,7 @@ transform = Transform( 3.40065, 0, 0, 0, 1, 0, 0, 0, 3.63167, -6.05725, -0.58223
 [node name="Person" parent="." index="2" instance=ExtResource( 3 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24301, -13.2833 )
+exploderous = false
 
 [node name="Bomba" parent="." index="3" instance=ExtResource( 4 )]
 

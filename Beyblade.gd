@@ -5,6 +5,8 @@ var direction = Vector3()
 var gravity = -9.8
 var velocity = Vector3()
 
+var PersonClass = load("res://Person.gd")
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -12,7 +14,10 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed("explode")):
-		$ExplosionArea.explode()
+		explode()
+
+func explode():
+	$ExplosionArea.explode()
 
 func _physics_process(delta):
 	direction = Vector3(0, 0, 0)
@@ -48,3 +53,6 @@ func _physics_process(delta):
 		var collision = get_slide_collision(0)
 		if collision.collider is RigidBody:
 			collision.collider.apply_impulse(collision.position, -collision.normal)
+		elif collision.collider is PersonClass:
+			if collision.collider.exploderous:
+				explode()

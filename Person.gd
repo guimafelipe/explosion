@@ -1,6 +1,7 @@
 extends KinematicBody
 
 export var loop = false #to continue in the route
+export var exploderous = false #if explode player in contact
 
 const up_vec = Vector3(0, 1, 0)
 const EPS = 0.5
@@ -76,10 +77,10 @@ func _physics_process(delta):
 			change_destination()
 	
 	velocity = move_and_slide(velocity, up_vec)
-	
+#
 #	var hitCount = get_slide_count()
 #
 #	if(hitCount > 0):
 #		var collision = get_slide_collision(0)
 #		if collision.collider is RigidBody:
-#			collision.collider.apply_impulse(collision.position, -collision.normal)x
+#			collision.collider.apply_impulse(collision.position, -collision.normal)
