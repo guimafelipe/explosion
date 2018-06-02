@@ -1,6 +1,21 @@
-extends Spatial
+extends "res://LevelTemplate.gd"
+
+var exploded_people = 0
 
 func _ready():
-	#need to setup the persons here
-	#better read from a text file to better balancing after?
-	pass
+	level = 2
+	$Beyblade.connect("died", self, "lost")
+	connect_people()
+
+func connect_people():
+	var children = get_children()
+	for child in children:
+		if child.name.begins_with("Person"):
+			child.connect("died", self, "add_exploded_count")
+
+func add_exploded_count():
+	exploded_people += 1
+#	print("exploded people: " + str(exploded_people))
+	if exploded_people == 2:
+#		print("ganhou")
+		win()

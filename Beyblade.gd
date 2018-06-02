@@ -7,6 +7,8 @@ var velocity = Vector3()
 
 var PersonClass = load("res://Person.gd")
 
+signal died
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -27,7 +29,8 @@ func explode():
 	change_camera_parent()
 	$ExplosionArea.explode()
 	yield(get_tree(), "idle_frame")
-	print("morri")
+#	print("morri")
+	emit_signal("died")
 	queue_free()
 
 func _physics_process(delta):

@@ -39,14 +39,24 @@ func move_to(destination, dt):
 	velocity.x = direction.x
 	velocity.z = direction.z
 
-func explode(exp_origin):
+func add_ragdoll_to_level(exp_origin):
 	var rag = ragdoll.instance()
 	rag.set_as_toplevel(true) #serah que isso eh realmente necessario?
-	get_tree().get_root().add_child(rag) # adiciona ele a arvore
+	
+	var root_children = get_tree().get_root().get_children() # adiciona ele a arvore
+	for child in root_children:
+		var child_name = child.name
+		if(child_name.begins_with("Level")):
+			child.add_child(rag)
+			break
 	rag.transform.origin = transform.origin #instancia na mesma posicao que o objeto atual
 	rag.translation.y = 1.5 #coloca o ragdoll na altura certa
 	rag.explode(exp_origin) #chama a explosao
+
+func explode(exp_origin):
+	add_ragdoll_to_level(exp_origin)
 	emit_signal("died")
+#	print("emiti o sinal")
 	queue_free()
 
 func change_destination():
