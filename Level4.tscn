@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TestMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Person.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Level4.gd" type="Script" id=1]
+[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TestMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Person.tscn" type="PackedScene" id=4]
 
-[node name="Level4" type="Spatial"]
+[node name="Level4" type="Spatial" index="0"]
 
-[node name="Beyblade" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
 
-[node name="TestMap" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Beyblade" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
 transform = Transform( 3.59166, 0, 0, 0, 1, 0, 0, 0, 4.39634, 0, 0, 0 )
 
-[node name="Person" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25809, -28.6758 )
 loop = true

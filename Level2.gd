@@ -1,6 +1,7 @@
 extends "res://LevelTemplate.gd"
 
 var exploded_people = 0
+const needed_to_win = 3
 
 func _ready():
 	level = 2
@@ -16,6 +17,6 @@ func connect_people():
 func add_exploded_count():
 	exploded_people += 1
 #	print("exploded people: " + str(exploded_people))
-	if exploded_people == 2:
+	if exploded_people == needed_to_win:
 #		print("ganhou")
 		win()
