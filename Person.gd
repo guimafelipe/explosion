@@ -8,7 +8,10 @@ const EPS = 0.5
 
 var ragdoll
 var speed = 400
+
 signal reached_destination
+signal died
+
 var gravity = -9.8
 var velocity = Vector3()
 var destination
@@ -43,6 +46,7 @@ func explode(exp_origin):
 	rag.transform.origin = transform.origin #instancia na mesma posicao que o objeto atual
 	rag.translation.y = 1.5 #coloca o ragdoll na altura certa
 	rag.explode(exp_origin) #chama a explosao
+	emit_signal("died")
 	queue_free()
 
 func change_destination():
