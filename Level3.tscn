@@ -5,7 +5,7 @@
 [ext_resource path="res://Beyblade.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Car.tscn" type="PackedScene" id=4]
 
-[node name="Level3" type="Spatial" index="0"]
+[node name="Level3" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -23,6 +23,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27324, 3.18251, 17.587 )
 
 transform = Transform( -0.236704, 0, 0.998733, 0, 1.0264, 0, -0.998733, 0, -0.236704, -98.5834, 1.58315, -0.92545 )
 exploderous = false
+has_vision = false
 
 [node name="Route" type="Spatial" parent="Car" index="1"]
 

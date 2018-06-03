@@ -86,6 +86,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.5, 0 )
 shape = SubResource( 1 )
 disabled = false
@@ -109,6 +110,7 @@ _sections_unfolded = [ "Geometry", "Transform" ]
 
 [node name="Target" type="Spatial" parent="." index="1"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47388, 0 )
 
 [node name="Camera" type="Camera" parent="Target" index="0"]
