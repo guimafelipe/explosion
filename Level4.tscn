@@ -5,12 +5,14 @@
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Person.tscn" type="PackedScene" id=4]
 
-[node name="Level4" type="Spatial" index="0"]
+[node name="Level4" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11473, 0 )
 
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 

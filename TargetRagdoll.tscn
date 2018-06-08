@@ -1,16 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://PersonRagdoll.gd" type="Script" id=1]
-[ext_resource path="res://PersonMesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TargetMesh.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 1.0
-height = 0.0232177
+height = 0.002
 
-[node name="PersonRagdoll" type="RigidBody" index="0" groups=[
-"ExplodeReceptor",
-]]
+[node name="TargetRagdoll" type="RigidBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -38,15 +36,12 @@ linear_damp = -1.0
 angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 shape = SubResource( 1 )
 disabled = false
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="PersonMesh" parent="." index="1" instance=ExtResource( 2 )]
+[node name="TargetMesh" parent="." index="1" instance=ExtResource( 2 )]
 
 

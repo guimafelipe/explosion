@@ -21,8 +21,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7372, 39.0336 )
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.3422, 2.24144, 31.735 )
-exploderous = false
-has_vision = false
 
 [node name="Route" type="Spatial" parent="Person" index="1"]
 
@@ -37,8 +35,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1146, 2.24144, 35.7619 )
 _sections_unfolded = [ "Collision", "Transform" ]
-exploderous = false
-has_vision = false
 
 [node name="Route" type="Spatial" parent="Person2" index="1"]
 
@@ -55,8 +51,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9869, 2.24144, 39.8494 )
 _sections_unfolded = [ "Collision", "Transform" ]
-exploderous = false
-has_vision = false
 
 [node name="Route" type="Spatial" parent="Person3" index="1"]
 
@@ -72,8 +66,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.2921, 0, 0 )
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7679, 2.24144, 25.6355 )
-exploderous = false
-has_vision = false
 
 [node name="Route" type="Spatial" parent="Person4" index="1"]
 
@@ -89,8 +81,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6316, 0, -2.96406 )
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4678, 2.24144, 18.6652 )
-exploderous = false
-has_vision = false
 
 [node name="Route" type="Spatial" parent="Person5" index="1"]
 
@@ -105,31 +95,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4368, 0, 3.44546 )
 [node name="Person6" parent="." index="7" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07271, 2.24144, 16.3357 )
-exploderous = false
-has_vision = false
 
 [node name="Person7" parent="." index="8" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2015, 2.24144, -17.3835 )
-exploderous = false
-has_vision = false
 
 [node name="Person8" parent="." index="9" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6933, 2.24144, -20.2995 )
-exploderous = false
-has_vision = false
 
 [node name="Person9" parent="." index="10" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9025, 2.24144, 18.6562 )
-exploderous = false
-has_vision = false
 
 [node name="Person10" parent="." index="11" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8423, 2.24144, 2.5272 )
-exploderous = false
-has_vision = false
 
 

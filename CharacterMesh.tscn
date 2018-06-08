@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://charactermesh.dae" type="PackedScene" id=1]
+
+[node name="CharacterMesh" instance=ExtResource( 1 )]
+
+

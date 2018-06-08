@@ -7,6 +7,10 @@ var velocity = Vector3()
 
 var PersonClass = load("res://Person.gd")
 
+var is_moving # check if it's moving and animation not playing to enable walk animation
+var must_rotate # check only if it's moving to rotate mesh
+onready var character = get_node(".") #Godot me mandou usar onready
+
 signal died
 
 func _ready():
@@ -72,3 +76,17 @@ func _physics_process(delta):
 		elif collision.collider is PersonClass:
 			if collision.collider.exploderous:
 				explode()
+				
+	#HANDLING ANIMATION AND ROTATION
+	is_moving = (velocity.x or velocity.y or velocity.z != 0) and !$CollisionShape/CharacterMesh/AnimationPlayer.is_playing()
+	must_rotate = (velocity.x or velocity.y or velocity.z != 0)
+
+	if must_rotate:
+		var angle = atan2(velocity.x, velocity.z)
+		var char_rot = character.get_rotation()
+		char_rot.y = angle
+		character.set_rotation(char_rot)
+		
+	#ANIMAÇÃO DE ANDAR
+	if is_moving:
+		$CollisionShape/CharacterMesh/AnimationPlayer.play("default")

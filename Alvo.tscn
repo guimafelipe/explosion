@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Alvo.gd" type="Script" id=1]
+[ext_resource path="res://TargetMesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Vision.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 1.04305
+height = 0.002
+
+[node name="Alvo" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+loop = false
+exploderous = false
+has_vision = false
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0" groups=[
+"ExplodeReceptor",
+]]
+
+shape = SubResource( 1 )
+disabled = false
+
+[node name="TargetMesh" parent="CollisionShape" index="0" instance=ExtResource( 2 )]
+
+[node name="Vision" parent="." index="1" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Audio Bus", "Collision", "Transform", "Visibility" ]
+
+
