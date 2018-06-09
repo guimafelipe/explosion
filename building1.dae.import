@@ -2,15 +2,15 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/car.dae-4d88fc56aef3d4fadabe56d12a4ccb39.scn"
+path="res://.import/building1.dae-aef030e2220b909153906caf05e85d99.scn"
 
 [deps]
 
-source_file="res://car.dae"
-source_md5="4b577f29c38d4634892b1dac49c5d79a"
+source_file="res://building1.dae"
+source_md5="6219259ccb46cd32eac4942a361c3caa"
 
-dest_files=[ "res://.import/car.dae-4d88fc56aef3d4fadabe56d12a4ccb39.scn" ]
-dest_md5="30edaa839afdc2f9e4552264352e7fb7"
+dest_files=[ "res://.import/building1.dae-aef030e2220b909153906caf05e85d99.scn" ]
+dest_md5="5f4a592d505cba01c05552b5e248548e"
 
 [params]
 

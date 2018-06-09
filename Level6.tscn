@@ -13,7 +13,7 @@ subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
 
-[node name="Level6" type="Spatial" index="0"]
+[node name="Level6" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -23,7 +23,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.778, 1.19158, 39.8892 )
 
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 3.46451, 0, 0, 0, 1, 0, 0, 0, 5.20071, 0.00121689, 0.0878108, -0.00128269 )
+transform = Transform( 1.43107, 0, 0, 0, 1, 0, 0, 0, 2.14824, 0.00121689, 0.0878108, -0.00128269 )
 
 [node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -135,6 +135,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4468, 0, 0 )
 [node name="AlvoVelho" parent="." index="8" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7584, 1.11453, -27.1979 )
+visible = false
 _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="AlvoVelho" index="3"]
@@ -157,6 +158,6 @@ material/0 = null
 "ExplodeReceptor",
 ] instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9377, 2.63464, -28.36 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6086, 2.63464, -20.2722 )
 
 

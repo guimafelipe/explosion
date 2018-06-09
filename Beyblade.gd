@@ -4,6 +4,7 @@ var speed = 500
 var direction = Vector3()
 var gravity = -9.8
 var velocity = Vector3()
+onready var global = get_node("/root/global")
 
 var PersonClass = load("res://Person.gd")
 
@@ -20,6 +21,7 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed("explode")):
+#		global.explosionSound.start() # DANDO MERDA
 		explode()
 
 func change_camera_parent():
@@ -64,9 +66,11 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
+	#CÓDIGO DE PULAR E TESTAR EXPLOSÃO
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = 10 #jump
-	
+		global.playExplosion() #AQUI ESTÁ DANDO MERDA
+
 	var hitCount = get_slide_count()
 
 	if(hitCount > 0):
@@ -74,7 +78,7 @@ func _physics_process(delta):
 		if collision.collider is RigidBody:
 			collision.collider.apply_impulse(collision.position, -collision.normal)
 		elif collision.collider is PersonClass:
-			if collision.collider.exploderous:
+			if collision.collider.is_in_group("Exploderous"):
 				explode()
 				
 	#HANDLING ANIMATION AND ROTATION

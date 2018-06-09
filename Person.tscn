@@ -9,7 +9,7 @@
 radius = 1.0
 height = 0.0828764
 
-[sub_resource type="SphereMesh" id=5]
+[sub_resource type="SphereMesh" id=2]
 
 radius = 1.0
 height = 2.0
@@ -19,6 +19,7 @@ is_hemisphere = false
 
 [node name="Person" type="KinematicBody" groups=[
 "ExplodeReceptor",
+"Exploderous",
 ]]
 
 input_ray_pickable = true
@@ -47,7 +48,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
 
-transform = Transform( 0.231499, 0, 0, 0, -5.86822e-08, 0.133559, 0, -0.360188, -2.17596e-08, 0, 1.41788, -0.70051 )
+transform = Transform( 0.230537, 0, 0, 0, -5.84383e-08, 0.133004, 0, -0.358691, -2.16692e-08, 0, 1.41788, -0.70051 )
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -57,7 +59,7 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = SubResource( 5 )
+mesh = SubResource( 2 )
 skeleton = NodePath("..")
 material/0 = null
 

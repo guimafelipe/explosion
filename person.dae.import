@@ -7,7 +7,7 @@ path="res://.import/person.dae-366a1f2788a9b76e11cca57a408d3561.scn"
 [deps]
 
 source_file="res://person.dae"
-source_md5="e404c2f69402579e75779868b8679d7c"
+source_md5="e8b2470cce2bdef2dbf9d7ca57af6b8c"
 
 dest_files=[ "res://.import/person.dae-366a1f2788a9b76e11cca57a408d3561.scn" ]
 dest_md5="71649584de19facbdb13f436c3012598"

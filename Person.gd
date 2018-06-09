@@ -6,7 +6,7 @@ export var has_vision = false
 #export var vision_size = 4 #vision range
 
 const up_vec = Vector3(0, 1, 0)
-const EPS = 0.5
+const EPS = 1
 
 var ragdoll
 var speed = 400
@@ -79,12 +79,15 @@ func change_destination():
 	initial_point+=1
 	if initial_point < route_pos.size():
 		set_destination(route_pos[initial_point])
+		print("Chegou aqui 1")
 	elif loop:
 		initial_point = 0
 		set_destination(route_pos[initial_point])
+		print("Chegou aqui 2")
 	else:
 		emit_signal("reached_destination")
 		initial_point = -1 #chegou ao ultimo ponto
+		print("sinal emitido chegou")
 
 func _physics_process(delta):
 	var direction = Vector3(0, 0, 0)
@@ -116,6 +119,13 @@ func _physics_process(delta):
 #		var collision = get_slide_collision(0)
 #		if collision.collider is RigidBody:
 #			collision.collider.apply_impulse(collision.position, -collision.normal)
+
+
+##DEBUGGING
+#	print("Initial point is", initial_point)
+#
+#	var here = self.global_transform.origin
+#	print("Distance to is ", here.distance_to(destination))
 
 func _on_Vision_body_entered( body ):
 	if(body.name == "Beyblade"):
