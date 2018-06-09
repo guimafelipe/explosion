@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level6.gd" type="Script" id=1]
 [ext_resource path="res://Beyblade.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Alvo.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CubeMesh" id=1]
+
+size = Vector3( 2, 2, 2 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
 
 [node name="Level6" type="Spatial"]
 
@@ -11,11 +19,11 @@ script = ExtResource( 1 )
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 2 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.778, 1.70479, 39.8892 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.778, 1.19158, 39.8892 )
 
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 3.46451, 0, 0, 0, 1, 0, 0, 0, 5.20071, 0, 0, 0 )
+transform = Transform( 1.43107, 0, 0, 0, 1, 0, 0, 0, 2.14824, 0.00121689, 0.0878108, -0.00128269 )
 
 [node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -112,6 +120,7 @@ transform = Transform( 0.212159, 0, -0.977235, 0, 1, 0, 0.977235, 0, 0.212159, -
 [node name="Person6" parent="." index="7" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8407, 1.11453, 13.188 )
+_sections_unfolded = [ "Collision", "Transform" ]
 loop = true
 exploderous = true
 
@@ -123,8 +132,32 @@ exploderous = true
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4468, 0, 0 )
 
-[node name="Alvo" parent="." index="8" instance=ExtResource( 4 )]
+[node name="AlvoVelho" parent="." index="8" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7584, 0.909565, -27.1979 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7584, 1.11453, -27.1979 )
+visible = false
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="AlvoVelho" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.03227, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="Alvo" parent="." index="9" groups=[
+"ExplodeReceptor",
+] instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6086, 2.63464, -20.2722 )
 
 

@@ -12,6 +12,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Beyblade" parent="." index="0" instance=ExtResource( 2 )]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11473, 0 )
+
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
 transform = Transform( 3.59166, 0, 0, 0, 1, 0, 0, 0, 4.39634, 0, 0, 0 )

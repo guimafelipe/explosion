@@ -4,8 +4,13 @@ var speed = 500
 var direction = Vector3()
 var gravity = -9.8
 var velocity = Vector3()
+onready var global = get_node("/root/global")
 
 var PersonClass = load("res://Person.gd")
+
+var is_moving # check if it's moving and animation not playing to enable walk animation
+var must_rotate # check only if it's moving to rotate mesh
+onready var character = get_node(".") #Godot me mandou usar onready
 
 signal died
 
@@ -16,6 +21,7 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed("explode")):
+#		global.explosionSound.start() # DANDO MERDA
 		explode()
 
 func change_camera_parent():
@@ -60,9 +66,11 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 	
+	#CÓDIGO DE PULAR E TESTAR EXPLOSÃO
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = 10 #jump
-	
+		global.playExplosion() #AQUI ESTÁ DANDO MERDA
+
 	var hitCount = get_slide_count()
 
 	if(hitCount > 0):
@@ -70,5 +78,19 @@ func _physics_process(delta):
 		if collision.collider is RigidBody:
 			collision.collider.apply_impulse(collision.position, -collision.normal)
 		elif collision.collider is PersonClass:
-			if collision.collider.exploderous:
+			if collision.collider.is_in_group("Exploderous"):
 				explode()
+				
+	#HANDLING ANIMATION AND ROTATION
+	is_moving = (velocity.x or velocity.y or velocity.z != 0) and !$CollisionShape/CharacterMesh/AnimationPlayer.is_playing()
+	must_rotate = (velocity.x or velocity.y or velocity.z != 0)
+
+	if must_rotate:
+		var angle = atan2(velocity.x, velocity.z)
+		var char_rot = character.get_rotation()
+		char_rot.y = angle
+		character.set_rotation(char_rot)
+		
+	#ANIMAÇÃO DE ANDAR
+	if is_moving:
+		$CollisionShape/CharacterMesh/AnimationPlayer.play("default")
