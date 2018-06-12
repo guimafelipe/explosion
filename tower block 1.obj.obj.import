@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tower block 1.obj.obj-61dc9bbfe144e3126d34e532bae1c29f.mesh"
+
+[deps]
+
+files=[ "res://.import/tower block 1.obj.obj-61dc9bbfe144e3126d34e532bae1c29f.mesh" ]
+
+source_file="res://tower block 1.obj.obj"
+source_md5="68b53d24ae33bf45c9ab58473cdc137e"
+
+dest_files=[ "res://.import/tower block 1.obj.obj-61dc9bbfe144e3126d34e532bae1c29f.mesh", "res://.import/tower block 1.obj.obj-61dc9bbfe144e3126d34e532bae1c29f.mesh" ]
+dest_md5="4f41b980c97120adabc5e0c51b0da850"
+
+[params]
+
+generate_tangents=true

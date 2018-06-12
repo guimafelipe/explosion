@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level5.gd" type="Script" id=1]
-[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Beyblade.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Person.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Bomba.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Bomba.tscn" type="PackedScene" id=5]
 
-[node name="Level5" type="Spatial" index="0"]
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 2.08426, 6.75831, 4.99983 )
+
+[node name="Level5" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -16,7 +20,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1805, 2.03778, 0 )
 
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 3.40065, 0, 0, 0, 1, 0, 0, 0, 3.63167, -6.05725, -0.582237, -4.19193 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05725, -0.582237, -4.19193 )
 
 [node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -41,5 +45,44 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04603, -0.674443 )
 [node name="Bomba5" parent="." index="7" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04603, 2.85199 )
+
+[node name="StaticBody" type="StaticBody" parent="." index="8"]
+
+transform = Transform( 0.697322, 0, 0, 0, 1, 0, 0, 0, 0.67462, -1.26445, 0, -1.8094 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57627, 0, -13.8123 )
+shape = SubResource( 1 )
+disabled = false
+
+[node name="Label" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = -30.0
+margin_right = 217.0
+margin_bottom = -16.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "ALTERNATIVE WAYS TO KILL"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 

@@ -7,7 +7,7 @@ path="res://.import/car.dae-4d88fc56aef3d4fadabe56d12a4ccb39.scn"
 [deps]
 
 source_file="res://car.dae"
-source_md5="4b577f29c38d4634892b1dac49c5d79a"
+source_md5="f7f307290dae9f885e3e1459d4771632"
 
 dest_files=[ "res://.import/car.dae-4d88fc56aef3d4fadabe56d12a4ccb39.scn" ]
 dest_md5="30edaa839afdc2f9e4552264352e7fb7"

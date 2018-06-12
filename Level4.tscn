@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Level4.gd" type="Script" id=1]
-[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Beyblade.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/BarrierRight.tscn" type="PackedScene" id=5]
 
-[node name="Level4" type="Spatial" index="0"]
+[node name="Level4" type="Spatial"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -16,12 +17,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11473, 0 )
 
 [node name="TestMap" parent="." index="1" instance=ExtResource( 3 )]
 
-transform = Transform( 3.59166, 0, 0, 0, 1, 0, 0, 0, 4.39634, 0, 0, 0 )
-
 [node name="Person" parent="." index="2" instance=ExtResource( 4 )]
 
 editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25809, -28.6758 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74641, 1.25809, -21.0562 )
 _sections_unfolded = [ "Collision", "Pause", "Transform", "collision" ]
 loop = true
 has_vision = true
@@ -35,5 +34,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6434, 0, 0 )
 [node name="Position3D2" type="Position3D" parent="Person/Route" index="1"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4775, 0, 0 )
+
+[node name="BarrierRight" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="Label" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = -30.0
+margin_right = 320.0
+margin_bottom = -16.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "DON'T GET CAUGHT BEFORE YOU KABOOM!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 

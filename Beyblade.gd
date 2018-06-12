@@ -21,7 +21,7 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed("explode")):
-#		global.explosionSound.start() # DANDO MERDA
+		global.playExplosion()
 		explode()
 
 func change_camera_parent():
@@ -33,6 +33,7 @@ func change_camera_parent():
 
 func explode():
 	change_camera_parent()
+	global.playExplosion()
 	$ExplosionArea.explode()
 	yield(get_tree(), "idle_frame")
 #	print("morri")
@@ -69,7 +70,7 @@ func _physics_process(delta):
 	#CÓDIGO DE PULAR E TESTAR EXPLOSÃO
 	if is_on_floor() and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = 10 #jump
-		global.playExplosion() #AQUI ESTÁ DANDO MERDA
+		global.playExplosion()
 
 	var hitCount = get_slide_count()
 
@@ -82,7 +83,7 @@ func _physics_process(delta):
 				explode()
 				
 	#HANDLING ANIMATION AND ROTATION
-	is_moving = (velocity.x or velocity.y or velocity.z != 0) and !$CollisionShape/CharacterMesh/AnimationPlayer.is_playing()
+	is_moving = (velocity.x or velocity.y or velocity.z != 0) and !$CollisionShape/PlayerMesh/AnimationPlayer.is_playing()
 	must_rotate = (velocity.x or velocity.y or velocity.z != 0)
 
 	if must_rotate:
@@ -93,4 +94,4 @@ func _physics_process(delta):
 		
 	#ANIMAÇÃO DE ANDAR
 	if is_moving:
-		$CollisionShape/CharacterMesh/AnimationPlayer.play("default")
+		$CollisionShape/PlayerMesh/AnimationPlayer.play("default")
