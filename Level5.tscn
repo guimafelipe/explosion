@@ -71,15 +71,17 @@ anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = -30.0
-margin_right = 217.0
-margin_bottom = -16.0
+margin_top = -50.0
+margin_right = 346.0
+margin_bottom = -2.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "ALTERNATIVE WAYS TO KILL"
+text = "AREN'T ALTERNATIVE WAYS TO GO BOOM NICE?
+THIS GUY AGREES
+"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

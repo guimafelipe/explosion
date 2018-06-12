@@ -4,14 +4,6 @@
 [ext_resource path="res://Scenes/Vision.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/PersonMesh.tscn" type="PackedScene" id=3]
 
-
-
-
-
-
-
-
-
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 1.0
@@ -26,8 +18,8 @@ rings = 32
 is_hemisphere = false
 
 [node name="Person" type="KinematicBody" groups=[
-"ExplodeReceptor",
 "Exploderous",
+"ExplodeReceptor",
 ]]
 
 input_ray_pickable = true

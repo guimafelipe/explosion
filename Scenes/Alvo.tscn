@@ -1,26 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Alvo.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/TargetMesh.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Vision.tscn" type="PackedScene" id=3]
-
-
-
-
-
-
-
-
-
-
+[ext_resource path="res://Scenes/Vision.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Target__.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 
 radius = 1.04305
 height = 0.002
 
-[node name="Alvo" type="KinematicBody"]
+[node name="Alvo" type="KinematicBody" groups=[
+"ExplodeReceptor",
+]]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00724, 0 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -44,9 +37,7 @@ has_vision = false
 shape = SubResource( 1 )
 disabled = false
 
-[node name="TargetMesh" parent="CollisionShape" index="0" instance=ExtResource( 2 )]
-
-[node name="Vision" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Vision" parent="." index="1" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform", "Visibility" ]
 
@@ -77,5 +68,7 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Transform" ]
+
+[node name="TARGET__" parent="." index="3" instance=ExtResource( 3 )]
 
 

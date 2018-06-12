@@ -34,7 +34,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Position3D2" type="Position3D" parent="Car/Route" index="1"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -54.2254, 1.90735e-05, 131.074 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75.797, 1.90735e-05, 138.069 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Label" type="Label" parent="." index="3"]
@@ -44,15 +44,17 @@ anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = -30.0
-margin_right = 314.0
-margin_bottom = -16.0
+margin_top = -60.0
+margin_right = 360.0
+margin_bottom = -12.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "EXPLODE THAT CAR BEFORE IT RUNS AWAY"
+text = "SEE THAT PRETTY PINK CAR?
+LET'S TAKE IT DOWN JUST BECAUSE 
+BE QUICK!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

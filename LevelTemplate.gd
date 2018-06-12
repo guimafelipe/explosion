@@ -29,3 +29,7 @@ func call_next_level():
 	
 func call_same_level():
 	get_tree().change_scene("res://Level" + str(level) + ".tscn")
+	
+func _physics_process(delta):
+	if Input.is_action_just_pressed("reload"):
+		call_same_level()

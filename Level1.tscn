@@ -5,10 +5,10 @@
 [ext_resource path="res://Scenes/Beyblade.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Person.tscn" type="PackedScene" id=4]
 [ext_resource path="res://bombman.dae" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Alvo.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/BarrierRight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/BarrierRight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Alvo.tscn" type="PackedScene" id=7]
 
-[node name="Level1" type="Spatial"]
+[node name="Level1" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -18,14 +18,13 @@ script = ExtResource( 1 )
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.9815, 1.26944, 0 )
 
-[node name="Alvo1" parent="." index="2" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.843, 1.54648, 0 )
-
-[node name="Person2" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Person2" parent="." index="2" instance=ExtResource( 4 )]
 
 transform = Transform( -0.0157477, -0.00212208, -0.999874, 0.00218961, 0.999995, -0.00215682, 0.999874, -0.00222329, -0.015743, -1.08447, 1.18385, 15.6613 )
+
+[node name="Person6" parent="." index="3" instance=ExtResource( 4 )]
+
+transform = Transform( -0.0157477, -0.00212208, -0.999874, 0.00218961, 0.999995, -0.00215682, 0.999874, -0.00222329, -0.015743, 24.1673, 1.18385, 1.34058 )
 
 [node name="Person3" parent="." index="4" instance=ExtResource( 4 )]
 
@@ -48,14 +47,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 visible = false
 
-[node name="Alvo" parent="." index="7" groups=[
-"ExplodeReceptor",
-] instance=ExtResource( 6 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64112, 1.31812, 0 )
-_sections_unfolded = [ "Collision" ]
-
-[node name="Controls" type="Label" parent="." index="8"]
+[node name="Controls" type="Label" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -72,34 +64,42 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "WASD - WALK
 Z - EXPLODE YOURSELF
-NATURALLY, YOU HAVE ONE ONLY LIFE"
+NATURALLY, YOU HAVE ONE ONLY LIFE
+R - IF YOU ARE STUCK"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Instructions" type="Label" parent="." index="9"]
+[node name="Instructions" type="Label" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
 margin_left = 40.0
-margin_top = -30.0
-margin_right = 273.0
-margin_bottom = -8.0
+margin_top = -100.0
+margin_right = 415.0
+margin_bottom = -35.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "	EXPLODE THE HARMLESS TARGET"
+text = "	THIS IS YOUT FINAL MISSION ON EARTH
+	IT LOOKS AS IF OTHERS HAD THE SAME IDEA, THOUGH
+	ON THIS DISQUIETING NIGHT
+	START BY EXPLODIND THE HARMLESS PASSERBY"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="BarrierRight" parent="." index="10" instance=ExtResource( 7 )]
+[node name="BarrierRight" parent="." index="9" instance=ExtResource( 6 )]
+
+[node name="Alvo" parent="." index="10" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99557, 1.97068, -6.8787 )
 
 
 [editable path="Person5"]
