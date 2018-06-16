@@ -7,7 +7,7 @@ path="res://.import/bomb.dae-e8be28a99b2425be50a24f17a0e94b35.scn"
 [deps]
 
 source_file="res://bomb.dae"
-source_md5="80c5407a227497b05a2c3cdc90a32cd6"
+source_md5="33ea18082ec8578c125a2ecf29cc1806"
 
 dest_files=[ "res://.import/bomb.dae-e8be28a99b2425be50a24f17a0e94b35.scn" ]
 dest_md5="cda394d1817d610063f701cb77e2b080"

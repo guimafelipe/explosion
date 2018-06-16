@@ -7,7 +7,7 @@ path="res://.import/bombman.dae-dbcd07841b55916cf82a4920943914fb.scn"
 [deps]
 
 source_file="res://bombman.dae"
-source_md5="a6fe9c09df869e7ac4e3c4bf1f602e92"
+source_md5="20c4e02fd8df1754e71645a7e6ce9a8c"
 
 dest_files=[ "res://.import/bombman.dae-dbcd07841b55916cf82a4920943914fb.scn" ]
 dest_md5="80615d86877f91e69b9eba44ab06179b"
