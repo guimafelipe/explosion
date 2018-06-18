@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
 [ext_resource path="res://TestMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Beyblade.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Person.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Alvo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Beyblade.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Person.tscn" type="PackedScene" id=4]
+[ext_resource path="res://bombman.dae" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/BarrierRight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Alvo.tscn" type="PackedScene" id=7]
 
 [node name="Level1" type="Spatial" index="0"]
 
@@ -12,84 +14,92 @@ script = ExtResource( 1 )
 
 [node name="TestMap" parent="." index="0" instance=ExtResource( 2 )]
 
-transform = Transform( 2.82833, 0, 0, 0, 1, 0, 0, 0, 3.5406, 0, 0, 0 )
-
 [node name="Beyblade" parent="." index="1" instance=ExtResource( 3 )]
 
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.9815, 1.26944, 0 )
 
-[node name="Alvo1" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Person2" parent="." index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.843, 1.54648, 0 )
+transform = Transform( -0.0157477, -0.00212208, -0.999874, 0.00218961, 0.999995, -0.00215682, 0.999874, -0.00222329, -0.015743, -1.08447, 1.18385, 15.6613 )
 
-[node name="Person2" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Person6" parent="." index="3" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24013, 1.54648, 15.6613 )
+transform = Transform( -0.0157477, -0.00212208, -0.999874, 0.00218961, 0.999995, -0.00215682, 0.999874, -0.00222329, -0.015743, 24.1673, 1.18385, 1.34058 )
 
 [node name="Person3" parent="." index="4" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2008, 1.54648, -17.7687 )
+transform = Transform( -0.655614, 0, -0.755096, 0, 1, 0, 0.755096, 0, -0.655614, -10.0451, 1.18385, -17.7687 )
 
 [node name="Person4" parent="." index="5" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7618, 1.54648, 11.2326 )
+transform = Transform( -0.42892, 0, 0.903342, 0, 1, 0, -0.903342, 0, -0.42892, -13.6061, 1.18385, 11.2326 )
 
 [node name="Person5" parent="." index="6" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09723, 1.54648, -3.52329 )
+editor/display_folded = true
+transform = Transform( -0.345198, 0, 0.93853, 0, 1, 0, -0.93853, 0, -0.345198, -1.94156, 1.18385, -3.52329 )
 
 [node name="MeshInstance" parent="Person5/CollisionShape" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Alvo" parent="." index="7" groups=[
-"ExplodeReceptor",
-] instance=ExtResource( 5 )]
+[node name="Scene Root" parent="Person5" index="3" instance=ExtResource( 5 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64112, 2.31912, 0 )
-_sections_unfolded = [ "Collision" ]
+visible = false
 
-[node name="Controls" type="Label" parent="." index="8"]
+[node name="Controls" type="Label" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1000.0
-margin_bottom = 50.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 1040.0
+margin_bottom = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 text = "WASD - WALK
-Z - EXPLODE"
+Z - EXPLODE YOURSELF
+NATURALLY, YOU HAVE ONE ONLY LIFE
+R - IF YOU ARE STUCK"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
 
-[node name="Instructions" type="Label" parent="." index="9"]
+[node name="Instructions" type="Label" parent="." index="8"]
 
 anchor_left = 0.0
-anchor_top = 0.0
+anchor_top = 1.0
 anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 3.0
-margin_top = 548.0
-margin_right = 1003.0
-margin_bottom = 598.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = -100.0
+margin_right = 415.0
+margin_bottom = -35.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "EXPLODE THE RIGHT TARGET"
+text = "	THIS IS YOUT FINAL MISSION ON EARTH
+	IT LOOKS AS IF OTHERS HAD THE SAME IDEA, THOUGH
+	ON THIS DISQUIETING NIGHT
+	START BY EXPLODIND THE HARMLESS PASSERBY"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect" ]
+
+[node name="BarrierRight" parent="." index="9" instance=ExtResource( 6 )]
+
+[node name="Alvo" parent="." index="10" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99557, 1.97068, -6.8787 )
 
 
 [editable path="Person5"]

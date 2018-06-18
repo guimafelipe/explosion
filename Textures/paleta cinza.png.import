@@ -1,0 +1,33 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/paleta cinza.png-244682ec0c2f39dab24f22f8b7b6d813.s3tc.stex"
+path.etc2="res://.import/paleta cinza.png-244682ec0c2f39dab24f22f8b7b6d813.etc2.stex"
+
+[deps]
+
+source_file="res://Textures/paleta cinza.png"
+source_md5="5dc7977fb41e03c738ab48b02c4bc6dc"
+
+dest_files=[ "res://.import/paleta cinza.png-244682ec0c2f39dab24f22f8b7b6d813.s3tc.stex", "res://.import/paleta cinza.png-244682ec0c2f39dab24f22f8b7b6d813.etc2.stex" ]
+dest_md5="8e907a0c94fcf4fd5007e2441c166000"
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

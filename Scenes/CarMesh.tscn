@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://car.dae" type="PackedScene" id=1]
+
+
+
+
+
+[node name="CarMesh" instance=ExtResource( 1 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Car" parent="." index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="polySurface2" parent="Car" index="0"]
+
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Beyblade.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/PlayerMesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Camera.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/ExplosionArea.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 1.76361
+height = 1.0
+
+[node name="Beyblade" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 0.108066, 0.994144, 0, -0.994144, 0.108066, 0.450075, 1.83674, 0 )
+shape = SubResource( 1 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="PlayerMesh" parent="CollisionShape" index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 0.108066, -0.994143, 0, 0.994143, 0.108066, -0.450075, -0.202212, -1.86024 )
+
+[node name="Target" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47388, 0 )
+
+[node name="Camera" type="Camera" parent="Target" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 0.955321, 0.29557, 0, -0.29557, 0.955321, 0, 4.82991, 7.37733 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 3 )
+offset = Vector3( 0, -2, 10 )
+
+[node name="ExplosionArea" parent="." index="2" instance=ExtResource( 4 )]
+
+

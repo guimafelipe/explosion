@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lancefield_-_Howzit_(1st_mix).wav-73a270fabe579c2b04b524a3b251f151.sample"
+
+[deps]
+
+source_file="res://Lancefield_-_Howzit_(1st_mix).wav"
+source_md5="b0e68442425e5febc0acfec02220b1d2"
+
+dest_files=[ "res://.import/Lancefield_-_Howzit_(1st_mix).wav-73a270fabe579c2b04b524a3b251f151.sample" ]
+dest_md5="fc917e9cc04e1de72a57427f426e382a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
